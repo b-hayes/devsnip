@@ -1,0 +1,46 @@
+﻿<Window x:Class="DevSnip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DevSnip"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="399.091" Width="708.182" Topmost="True" Top="100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="28" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer x:Name="OutPutScrollViewer" Grid.Column="0" Grid.Row="0">
+            <TextBlock x:Name="OutPut" 
+                   Background="DarkSlateBlue"
+                   Foreground="WhiteSmoke"
+                       FontFamily="Consolas"
+                   Text="output"
+                   />
+        </ScrollViewer>
+
+        <TextBox x:Name="inputCMD" 
+                 Grid.Column="0"
+                 Grid.Row="1"
+                 Background="Black"
+                 Foreground="GreenYellow"
+                 VerticalContentAlignment="Center"
+                 
+                 KeyDown="inputCMD_KeyDown"
+                 >Hi :)</TextBox>
+
+        <StackPanel x:Name="sidePanel" Grid.Column="1" Grid.Row="0"
+                    Grid.RowSpan="2"
+                    Background="Green">
+            <TextBlock x:Name="extra" Width="400"></TextBlock>
+        </StackPanel>
+        <!--<Button x:Name="testButton" Grid.Column="1" Grid.Row="1" Click="testButton_Click">
+            Test Process</Button>-->
+    </Grid>
+</Window>
